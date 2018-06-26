@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+.wrap{
+  background: yellow;
+  width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row; /*direction은 메인 축이됨 */
+  justify-content: space-evenly; /*justify-content는 메인 축의 정렬. 같은 end라도 flex-dirextion에 따라 위치가 다르다 */
+  /*align-items: 교차 축 정렬*/
+  border: 10px solid blue;
+}
+.wrap div{
+  background: pink;
+  flex-basis: 100px; /*basis=width*/
+  flex-shrink:0;
+  border: 1px solid red;
+}
+
+.w1{
+  order: 1;
+  flex-shrink: 1; /*컨텐츠의 갯수 분의 ?;만큼 축소됨*/
+  flex-grow: 2;
+}
+.w2{
+  flex-shrink: 2;
+  flex-grow: 3;
+}
+.w3{
+  order: -1;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+.w4{
+  flex-shrink: 1;
+  flex-grow: 1;
+}
